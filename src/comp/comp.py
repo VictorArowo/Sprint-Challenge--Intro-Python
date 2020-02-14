@@ -70,14 +70,7 @@ print(f)
 print("All names uppercase:")
 
 
-def mut(h):
-    n = deepcopy(h)
-    n.name = n.name.upper()
-    n.age += 5
-    return n
-
-
-g = [mut(human) for human in humans]
+g = [Human(human.name.upper(), human.age + 5) for human in humans]
 print(g)
 print(humans)
 
